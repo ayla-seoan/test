@@ -1,8 +1,64 @@
-# 깃 허브 테스트 
+# 클래스로(Classro) 회사 소개 웹사이트
 
-git init #한번만
-git add README.md #파일명, 여러번
-git commit -m "first commit" #저장(복원),여러번
-git branch -M main #main  이름 바꿀 수 있고 넣는거
-git remote add origin https://github.com/ayla-seoan/test.git #한번
-git push -u origin main #main은 브런치 명, 깃허브에 올리겠다
+동네 공방·작업실의 **원데이 클래스**(도자기, 베이킹, 가죽공예, 플라워, 드로잉, 향수)를 앱에서 찾고 바로 예약·결제하는 서비스, **클래스로**의 회사 소개 웹사이트입니다.
+
+> 수업용 가상 회사입니다. 등장하는 회사·인물·수치는 모두 지어낸 것입니다.
+> 내용은 `00_회사소개.md`를 기준으로 작성했습니다.
+
+## 실행 방법
+
+별도 설치나 빌드가 필요 없습니다. `index.html` 파일을 브라우저로 열면 됩니다.
+
+VS Code를 쓴다면 Live Server 확장으로 열어도 됩니다.
+
+## 폴더 구조
+
+```
+test/
+├── index.html          # 페이지 마크업
+├── css/
+│   └── style.css       # 스타일 (반응형 포함)
+├── js/
+│   └── main.js         # 메뉴, 스크롤 애니메이션, 숫자 카운트업
+├── 00_회사소개.md       # 원본 회사 소개 자료
+└── README.md
+```
+
+## 페이지 구성
+
+| 섹션 | 내용 |
+| --- | --- |
+| 히어로 | 한 줄 소개, 클래스 둘러보기 버튼 |
+| 회사 소개 | 설립, 대표, 임직원, 서비스, 제휴 공방, 수익 모델 |
+| 클래스 | 6개 카테고리 카드 |
+| 이용 방법 | 검색 → 상세 → 날짜·인원 선택 → 결제 → 예약 완료 |
+| 숫자로 보기 | 제휴 공방 420곳, 월 예약 7천 건, 평균 결제액 42,000원, 지역별 공방 비율 |
+| 팀 | 부서별 인원 (총 30명) |
+| 소식 | v2.3.0 배포, 회사 설립 |
+
+## 주요 기능
+
+- 모바일 햄버거 메뉴 (768px 이하)
+- 스크롤 시 헤더 배경 변경, 현재 섹션 메뉴 강조
+- 스크롤 등장 애니메이션
+- 숫자 카운트업, 지역별 막대 그래프 애니메이션
+- 맨 위로 버튼
+- `prefers-reduced-motion` 설정 시 애니메이션 끔
+
+## 사용 기술
+
+- HTML5, CSS3, JavaScript (프레임워크 없음)
+- 폰트: Google Fonts (Gowun Batang, Noto Sans KR)
+
+---
+
+## 깃허브 올리기 메모
+
+```bash
+git init                     # 한 번만
+git add README.md            # 파일명, 여러 번
+git commit -m "first commit" # 저장(복원), 여러 번
+git branch -M main           # 브랜치 이름을 main으로 변경
+git remote add origin https://github.com/ayla-seoan/test.git  # 한 번
+git push -u origin main      # main 브랜치를 깃허브에 올리기
+```
